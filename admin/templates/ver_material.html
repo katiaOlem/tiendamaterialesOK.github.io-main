@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <header>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ver Evento</title>
+        <link rel="shortcut icon" href="/images/logo.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/sweetalert2.min.css" media="screen"/>
+        <script type="text/javascript" src="/js/sweetalert2.all.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/crud/get_material.js"></script>
+        <script type="text/javascript" src="/crud/delete_material.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <script>
+            const token = sessionStorage.getItem('token');
+            if(token == null){
+                Swal.fire({
+                        title: "Error",
+                        text: "No has iniciado sesión",
+                        type: "error"
+                    }).then(function() {
+                        window.location = "/admin/templates/login.html";
+                    });
+            }
+        </script>
+    </header>
+
+    <body>
+    
+        <div class="navbar-default">
+            <ul>
+                <br>
+            <a href="materiales.html" class="text-decoration-none">
+            <button type="button" class="btn btn-primary1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+                  </svg>
+              HOME
+            </button>
+          </a>
+        </div>
+
+        <center><h1 style="color:blue;">Material Registrado</h1></center>
+        <br>
+        <div class="container mt-3">    
+            <br>
+            <div class="jumbotron">
+                <br>
+                <form id="form_cliente" action="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <center><label for="nombre">Nombre:</label></center>
+                                <br>
+                                <input type="text" id="nombre" name="nombre" class="form-control form-control-lg" readonly/>
+                                <br>
+                            </div>
+                            <div class="col-lg-6">
+                                <center><label for="lugar">Lugar:</label></center>
+                                <br>
+                                <input type="text" id="lugar" name="lugar" class="form-control form-control-lg" readonly/>
+                                <br>
+                            </div>
+                            <div class="col-lg-6">
+                                <center><label for="descripcion">Descripcion:</label></center>
+                               <textarea name="descripcion" id="descripcion" cols="63" rows="4" readonly></textarea>
+                                <br>
+                            </div>
+                            <div class="col-lg-12">
+                                <br>
+                                <center><label for="precio">Precio:</label></center>
+                                <input type="text" id="precio" name="precio" class="form-control form-control-lg" readonly />
+                                <br>
+                            </div>
+                            <div class="col-lg-6" >
+                               <center><img id="blah" class="img1" src="" alt=""></center> 
+                            </div>
+                        </div>
+                        <div class="col-lg-4" id="btn_actualizar" >
+                        </div>
+                        <div class="col-lg-4" id="btn_eliminar" >
+                        </div>
+                        <div class="col-lg-4" id="btn_regresar" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script async>
+        document.body.onload = ver_material();
+      </script>
+</html>

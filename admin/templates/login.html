@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <header>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="/css/sweetalert2.min.css" media="screen"/>
+        <script type="text/javascript" src="/js/sweetalert2.all.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    </header>
+    <body>
+        <section class="vh-100">
+            <div class="container-fluid h-custom">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <br><br><br><br><br><br><br>
+                  <center><img src="/images/login.png" width="600" height="550"class="img-fluid" alt="Sample image"></center>
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                  <form>
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                    <center>
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <h1 class="">Login</h1>
+                        </div>
+                    </center>
+
+                    <br><br>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" id="email" class="form-control form-control-lg"
+                        placeholder="Enter a valid email address" />
+                      <label class="form-label" for="email">Email address</label>
+                    </div>
+          
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                      <input type="password" id="password" class="form-control form-control-lg"
+                        placeholder="Enter password" />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
+          
+                    <div class="d-flex justify-content-between align-items-center">
+                      <!-- Checkbox -->
+                      <div class="form-check mb-0">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                        <label class="form-check-label" for="form2Example3">
+                          Remember me
+                        </label>
+                      </div>
+                      <a href="#!" class="text-body">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                      <button type="button" class="btn btn-primary1 btn-lg"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;" onclick="login()">Iniciar Sesión</button>
+                        <br>
+                        <br>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes una cuenta?</p>
+                        <a href="/admin/templates/registro.html"><span class="fas fa-sign-in-alt"></span> Registrate</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        <script type="text/javascript" src="/js/login.js"></script>
+    </body>
+</html>

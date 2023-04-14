@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <header>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registro</title>
+        <link rel="stylesheet" type="text/css" href="/css/sweetalert2.min.css" media="screen"/>
+        <script type="text/javascript" src="/js/sweetalert2.all.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</header>
+
+    <body>
+        <section class="vh-100">
+            <div class="container-fluid h-custom">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <br><br><br><br><br><br><br>
+                  <center><img src="/images/logo.png" class="img-fluid" alt="Sample image"></center>
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                  <form>
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                    <center>
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <h2 class="">Registrate</h2>
+                        </div>
+                    </center>
+
+                    <br><br>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <input type="email" id="email" class="form-control form-control-lg"
+                        placeholder="Enter a valid email address" />
+                      <label class="form-label" for="email">Email address</label>
+                    </div>
+          
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                      <input type="password" id="password" class="form-control form-control-lg"
+                        placeholder="Enter password" />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
+                    <br><br>
+                    
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <input type="button" value="Guardar" onclick="PostRegUser_Admin()" class="btn btn-success btn-block btn-lg">
+                        <br>
+                        <br>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">¿Ya tienes cuenta?</p>
+                        <a href="/admin/templates/login.html"><span class="fas fa-sign-in-alt"></span> Iniciar sesión</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        <script type="text/javascript" src="/js/registro.js"></script>
+    </body>
+</html>
